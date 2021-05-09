@@ -40,9 +40,9 @@ class RecyclerViewAdapter (private val vaccDates : List<VaccListItem>) : Recycle
                 this.vaccDates = vaccDates
                 view.city_address.text = vaccDates.name
                 view.vacDate.text = vaccDates.date
-                view.quantity.text = vaccDates.quantity
-                view.vacName.text = vaccDates.vaccine
-
+                view.quantity.text = "Liczba wolnych terminów: " + vaccDates.quantity
+                view.vaccLogo.setImageResource(vaccDates.vaccineLogo)
+                view.vaccinationAddr.text = vaccDates.address
         }
     }
 }

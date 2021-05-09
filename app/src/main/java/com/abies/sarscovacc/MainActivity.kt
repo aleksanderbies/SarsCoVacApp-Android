@@ -38,13 +38,21 @@ class MainActivity : AppCompatActivity() {
 
                     var vaccCity = cols.get(0).text()
                     var vaccDate = cols.get(1).text()
-                    var vaccQuantity = cols.get(2)
+                    var freeHours = cols.get(2)
+                    var vaccQuantity = freeHours.select("br").size +1
                     var vaccine = cols.get(3).text()
                     var vaccPlace = cols.get(4).text()
                     var place = vaccPlace.removePrefix("Błąd? ")
+                    var vacLogo = R.drawable.logo_astra
 
-                    vaccDatesList.add(VaccListItem(vaccCity, vaccDate, "1", vaccine))
-                    println(vaccCity + " " + place + " " + vaccDate + " " + vaccine)
+                    when (vaccine){
+                        "Moderna" -> vacLogo = R.drawable.logo_moderna
+                        "Pfizer" -> vacLogo = R.drawable.logo_pfizer
+                        "J & J" -> vacLogo = R.drawable.logo_jj
+                        "AstraZeneca" -> vacLogo = R.drawable.logo_astra
+                    }
+
+                    vaccDatesList.add(VaccListItem(vaccCity, vaccDate, "$vaccQuantity", vaccine, vacLogo, place))
                 }
 
                 this.runOnUiThread{
