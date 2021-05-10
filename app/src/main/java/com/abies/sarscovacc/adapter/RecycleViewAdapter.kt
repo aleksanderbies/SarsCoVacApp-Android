@@ -43,6 +43,7 @@ class RecyclerViewAdapter (private val vaccDates : List<VaccListItem>) : Recycle
                 view.quantity.text = "Liczba wolnych terminów: " + vaccDates.quantity
                 view.vaccLogo.setImageResource(vaccDates.vaccineLogo)
                 view.vaccinationAddr.text = vaccDates.address
+                view.phoneNoToVacPoint.text = vaccDates.phone
         }
     }
 }
