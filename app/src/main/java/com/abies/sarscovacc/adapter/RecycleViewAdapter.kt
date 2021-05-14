@@ -1,8 +1,14 @@
 package com.abies.sarscovacc.adapter
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.abies.sarscovacc.DetailsActivity
+import com.abies.sarscovacc.MainActivity
 import com.abies.sarscovacc.R;
 import com.abies.sarscovacc.data.VaccListItem
 import com.abies.sarscovacc.util.inflate
@@ -33,7 +39,6 @@ class RecyclerViewAdapter (private val vaccDates : List<VaccListItem>) : Recycle
                 v.setOnClickListener(this)
             }
             override fun onClick(v: View) {
-
             }
 
             fun bindSet(vaccDates: VaccListItem){
@@ -44,6 +49,19 @@ class RecyclerViewAdapter (private val vaccDates : List<VaccListItem>) : Recycle
                 view.vaccLogo.setImageResource(vaccDates.vaccineLogo)
                 view.vaccinationAddr.text = vaccDates.address
                 view.phoneNoToVacPoint.text = vaccDates.phone
+
+                view.phoneNoToVacPoint.setOnClickListener{
+                    var intent = Intent (view.context as Activity, DetailsActivity::class.java)
+
+                    intent.putExtra("vacCity", vaccDates.name)
+                    intent.putExtra("vacDate", vaccDates.date)
+                    intent.putExtra("vacLogo", vaccDates.vaccineLogo)
+                    intent.putExtra("vacAddr", vaccDates.address)
+                    intent.putExtra("vacPhone", vaccDates.phone)
+                    view.context.startActivity(intent)
+
+                }
+
         }
     }
 }
