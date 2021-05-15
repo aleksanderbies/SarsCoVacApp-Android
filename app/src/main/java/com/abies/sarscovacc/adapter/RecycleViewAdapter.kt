@@ -58,6 +58,8 @@ class RecyclerViewAdapter (private val vaccDates : List<VaccListItem>) : Recycle
                     intent.putExtra("vacLogo", vaccDates.vaccineLogo)
                     intent.putExtra("vacAddr", vaccDates.address)
                     intent.putExtra("vacPhone", vaccDates.phone)
+                    intent.putExtra("hours", vaccDates.hours)
+                    
                     view.context.startActivity(intent)
 
                 }
