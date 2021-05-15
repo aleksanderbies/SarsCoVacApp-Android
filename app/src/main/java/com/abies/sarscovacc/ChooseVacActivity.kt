@@ -11,8 +11,33 @@ class ChooseVacActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose_vac)
 
+
+        var intent = Intent (this, MainActivity::class.java)
+        var vaccine = ""
+
+        pfizer.setOnClickListener {
+            vaccine = "Pfizer"
+            intent.putExtra("vaccineName", vaccine)
+            startActivity(intent)
+        }
+        moderna.setOnClickListener{
+            vaccine = "Moderna"
+            intent.putExtra("vaccineName", vaccine)
+            startActivity(intent)
+        }
+        jj.setOnClickListener{
+            vaccine="J & J"
+            intent.putExtra("vaccineName", vaccine)
+            startActivity(intent)
+        }
+        astra.setOnClickListener{
+            vaccine="AstraZeneca"
+            intent.putExtra("vaccineName", vaccine)
+            startActivity(intent)
+        }
+
         allVaccines.setOnClickListener {
-            var intent = Intent (this, MainActivity::class.java)
+            intent.putExtra("vaccineName", "")
             startActivity(intent)
         }
     }

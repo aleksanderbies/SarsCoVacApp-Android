@@ -15,15 +15,18 @@ import kotlin.collections.ArrayList
 import kotlin.concurrent.thread
 import kotlin.reflect.typeOf
 
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        retrieveWebInfo()
+        var vaccine = intent.getStringExtra("vaccineName")
+        if (vaccine != null) {
+            retrieveWebInfo(vaccine)
+        }
     }
 
-    private fun retrieveWebInfo(){
+    private fun retrieveWebInfo(vaccineCorp : String){
             thread{
                 val doc = Jsoup.connect("https://szczepienia.github.io/slaskie").get()
 
@@ -31,6 +34,8 @@ class MainActivity : AppCompatActivity() {
                 var rows = vaccDates.select("tr")
 
                 val vaccDatesList = ArrayList<VaccListItem>()
+
+
 
                 for (i in 0 .. rows.size -1){
                     var row = rows.get(i)
@@ -55,7 +60,12 @@ class MainActivity : AppCompatActivity() {
                         "J & J" -> vacLogo = R.drawable.logo_jj
                         "AstraZeneca" -> vacLogo = R.drawable.logo_astra
                     }
-                    vaccDatesList.add(VaccListItem(vaccCity, vaccDate, "$vaccQuantity", vaccine, vacLogo, place, phone, ff))
+                    if (vaccineCorp.equals(vaccine)){
+                        vaccDatesList.add(VaccListItem(vaccCity, vaccDate, "$vaccQuantity", vaccine, vacLogo, place, phone, ff))
+                        continue
+                    } else if (vaccineCorp.equals("")){
+                        vaccDatesList.add(VaccListItem(vaccCity, vaccDate, "$vaccQuantity", vaccine, vacLogo, place, phone, ff))
+                    }
                 }
 
                 this.runOnUiThread{
