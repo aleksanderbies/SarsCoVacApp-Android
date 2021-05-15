@@ -47,10 +47,8 @@ class RecyclerViewAdapter (private val vaccDates : List<VaccListItem>) : Recycle
                 view.vacDate.text = vaccDates.date
                 view.quantity.text = "Liczba wolnych terminów: " + vaccDates.quantity
                 view.vaccLogo.setImageResource(vaccDates.vaccineLogo)
-                view.vaccinationAddr.text = vaccDates.address
-                view.phoneNoToVacPoint.text = vaccDates.phone
 
-                view.phoneNoToVacPoint.setOnClickListener{
+                view.setOnClickListener{
                     var intent = Intent (view.context as Activity, DetailsActivity::class.java)
 
                     intent.putExtra("vacCity", vaccDates.name)
@@ -59,7 +57,7 @@ class RecyclerViewAdapter (private val vaccDates : List<VaccListItem>) : Recycle
                     intent.putExtra("vacAddr", vaccDates.address)
                     intent.putExtra("vacPhone", vaccDates.phone)
                     intent.putExtra("hours", vaccDates.hours)
-                    
+
                     view.context.startActivity(intent)
 
                 }
