@@ -11,6 +11,7 @@ class ChooseVacActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose_vac)
 
+        var link = intent.getStringExtra("link")
 
         var intent = Intent (this, MainActivity::class.java)
         var vaccine = ""
@@ -18,26 +19,31 @@ class ChooseVacActivity : AppCompatActivity() {
         pfizer.setOnClickListener {
             vaccine = "Pfizer"
             intent.putExtra("vaccineName", vaccine)
+            intent.putExtra("link", link)
             startActivity(intent)
         }
         moderna.setOnClickListener{
             vaccine = "Moderna"
             intent.putExtra("vaccineName", vaccine)
+            intent.putExtra("link", link)
             startActivity(intent)
         }
         jj.setOnClickListener{
             vaccine="J & J"
             intent.putExtra("vaccineName", vaccine)
+            intent.putExtra("link", link)
             startActivity(intent)
         }
         astra.setOnClickListener{
             vaccine="AstraZeneca"
             intent.putExtra("vaccineName", vaccine)
+            intent.putExtra("link", link)
             startActivity(intent)
         }
 
         allVaccines.setOnClickListener {
             intent.putExtra("vaccineName", "")
+            intent.putExtra("link", link)
             startActivity(intent)
         }
     }

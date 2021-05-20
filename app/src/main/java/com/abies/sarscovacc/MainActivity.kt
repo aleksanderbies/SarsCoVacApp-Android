@@ -21,14 +21,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         var vaccine = intent.getStringExtra("vaccineName")
-        if (vaccine != null) {
-            retrieveWebInfo(vaccine)
+        var link = intent.getStringExtra("link")
+        if (vaccine != null && link !=null) {
+            retrieveWebInfo(vaccine, link)
         }
     }
 
-    private fun retrieveWebInfo(vaccineCorp : String){
+    private fun retrieveWebInfo(vaccineCorp : String, link : String){
             thread{
-                val doc = Jsoup.connect("https://szczepienia.github.io/slaskie").get()
+                val doc = Jsoup.connect(link).get()
 
                 var vaccDates= doc.select("tbody").first()
                 var rows = vaccDates.select("tr")

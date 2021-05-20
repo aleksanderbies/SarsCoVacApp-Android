@@ -48,52 +48,68 @@
             android:paddingLeft="10dp">
 
             <Button
-                android:id="@+id/button16"
+                android:id="@+id/pomorskie"
                 android:layout_width="165dp"
                 android:layout_height="60dp"
-                android:text="Pomorskie" />
+                android:text="Pomorskie"
+                android:textColor="#000000"
+                android:backgroundTint="#FFFF"/>
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/kujpomorskie"
                 android:layout_width="165dp"
                 android:layout_height="60dp"
-                android:text="Kujawsko - pomorskie" />
+                android:text="Kujawsko - pomorskie"
+                android:textColor="#000000"
+                android:backgroundTint="#FFFF"/>
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/podlaskie"
                 android:layout_width="165dp"
                 android:layout_height="60dp"
-                android:text="podlaskie" />
+                android:text="podlaskie"
+                android:textColor="#000000"
+                android:backgroundTint="#FFFF"/>
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/wielkopolskie"
                 android:layout_width="165dp"
                 android:layout_height="60dp"
-                android:text="wielkopolskie" />
+                android:text="wielkopolskie"
+                android:textColor="#000000"
+                android:backgroundTint="#FFFF"/>
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/dolnoslaskie"
                 android:layout_width="165dp"
                 android:layout_height="60dp"
-                android:text="dolnośląskie" />
+                android:text="dolnośląskie"
+                android:textColor="#000000"
+                android:backgroundTint="#FFFF"/>
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/lodzkie"
                 android:layout_width="165dp"
                 android:layout_height="60dp"
-                android:text="łódzkie" />
+                android:text="łódzkie"
+                android:textColor="#000000"
+                android:backgroundTint="#FFFF"/>
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/swietokrzyskie"
                 android:layout_width="165dp"
                 android:layout_height="60dp"
-                android:text="świętokrzyskie" />
+                android:text="świętokrzyskie"
+                android:textColor="#000000"
+                android:backgroundTint="#FFFF"/>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/podkarpackie"
                 android:layout_width="165dp"
                 android:layout_height="60dp"
-                android:text="podkarpackie" />
+                android:text="podkarpackie"
+                android:textColor="#000000"
+                android:backgroundTint="#FFFF"/>
         </LinearLayout>
 
         <LinearLayout
@@ -104,61 +120,77 @@
             android:paddingRight="10dp">
 
             <Button
-                android:id="@+id/button11"
+                android:id="@+id/zachpomorskie"
                 android:layout_width="165dp"
                 android:layout_height="60dp"
                 android:layout_gravity="right"
                 android:layout_weight="0"
-                android:text="zachodnio - pomorskie" />
+                android:text="zachodnio - pomorskie"
+                android:textColor="#000000"
+                android:backgroundTint="#FFFF"/>
 
             <Button
-                android:id="@+id/button12"
+                android:id="@+id/warmmazurskie"
                 android:layout_width="165dp"
                 android:layout_height="60dp"
                 android:layout_gravity="right"
-                android:text="Warmińsko - mazurskie" />
+                android:text="Warmińsko - mazurskie"
+                android:textColor="#000000"
+                android:backgroundTint="#FFFF"/>
 
             <Button
-                android:id="@+id/button13"
+                android:id="@+id/mazowieckie"
                 android:layout_width="165dp"
                 android:layout_height="60dp"
                 android:layout_gravity="right"
-                android:text="Mazowieckie" />
+                android:text="Mazowieckie"
+                android:textColor="#000000"
+                android:backgroundTint="#FFFF"/>
 
             <Button
-                android:id="@+id/button14"
+                android:id="@+id/lubuskie"
                 android:layout_width="165dp"
                 android:layout_height="60dp"
                 android:layout_gravity="right"
-                android:text="Lubuskie" />
+                android:text="Lubuskie"
+                android:textColor="#000000"
+                android:backgroundTint="#FFFF"/>
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/opolskie"
                 android:layout_width="165dp"
                 android:layout_height="60dp"
                 android:layout_gravity="right"
-                android:text="opolskie" />
+                android:text="opolskie"
+                android:textColor="#000000"
+                android:backgroundTint="#FFFF"/>
 
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/slaskie"
                 android:layout_width="165dp"
                 android:layout_height="60dp"
                 android:layout_gravity="right"
-                android:text="śląskie" />
+                android:text="śląskie"
+                android:textColor="#000000"
+                android:backgroundTint="#FFFF"/>
 
             <Button
-                android:id="@+id/button10"
+                android:id="@+id/lubelskie"
                 android:layout_width="165dp"
                 android:layout_height="60dp"
                 android:layout_gravity="right"
-                android:text="lubelskie" />
+                android:text="lubelskie"
+                android:textColor="#000000"
+                android:backgroundTint="#FFFF"/>
 
             <Button
-                android:id="@+id/button15"
+                android:id="@+id/malopolskie"
                 android:layout_width="165dp"
                 android:layout_height="60dp"
                 android:layout_gravity="right"
-                android:text="małopolskie" />
+                android:text="małopolskie"
+                android:textColor="#000000"
+                android:backgroundTint="#FFFF"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -185,7 +217,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/cityNameToVaccine"
                 android:layout_width="258dp"
                 android:layout_height="44dp"
                 android:ems="10"
@@ -195,6 +227,7 @@
                 android:textColorHighlight="#FFFFFF"
                 android:textColorHint="#FFFFFF"
                 android:textColorLink="#FFFFFF"
+                android:backgroundTint="#FFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
@@ -203,7 +236,7 @@
                 app:layout_constraintVertical_bias="0.283" />
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/search"
                 android:layout_width="48dp"
                 android:layout_height="47dp"
                 app:layout_constraintBottom_toBottomOf="parent"
