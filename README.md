@@ -8,7 +8,7 @@
 ## Usage
 Choose voivodeship in which you want to be vaccinated. And also choose the one of the vaccines available in Poland (Pfizer, Moderna, AstraZeneca, Johnson & Johnson).
 Later user can see all free vaccinations dates in voivodeship. User can click on CardView to see details like hours, address and phone numeber to vaccination point. 
-User can click to dail number to national immunization helpline (989) or to vaccination point. User can also visit a government website (<a href="https://pacjent.erejestracja.ezdrowie.gov.pl/auth">e-zdrowie</a>)to sing up for vaccination.
+User can click to dail number to national immunization helpline (989) or to vaccination point. User can also visit a government website (<a href="https://pacjent.erejestracja.ezdrowie.gov.pl/auth">e-zdrowie</a>) to sing up for vaccination.
 
 ## UI
 ![1](https://github.com/aleksanderbies/android-COVID-vaccine-scrap-info/blob/master/screenshots/Screenshot_1621929326.png?raw=true)
@@ -31,5 +31,5 @@ MIT
 + COMPLETE
 ```
 
-##See also
+## See also
 <a href="https://szczepienia.github.io">https://szczepienia.github.io - website that helped me to do this project</a> 
