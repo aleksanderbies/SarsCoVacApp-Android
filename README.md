@@ -24,7 +24,7 @@ User can click to dail number to national immunization helpline (989) or to vacc
 License
 ----
 
-Creative Commons Zero v1.0 Universal
+MIT
 
 ## Status of project: 
 ```diff 
